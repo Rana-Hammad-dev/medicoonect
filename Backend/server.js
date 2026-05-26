@@ -8,18 +8,12 @@ connectDB();
 
 const app = express();
 
-<<<<<<< HEAD
-// Middlewares
-app.use(cors({ origin: "https://mediconnect-eight-gamma.vercel.app", credentials: true }));
-app.use(express.json());
-=======
 // ── CORS — allow all Vercel + localhost origins ───────────────────────────────
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:3000",
   process.env.CLIENT_URL, // your Vercel URL from .env
 ];
->>>>>>> bb44cbb (fix: remove .env from tracking, add gitignore)
 
 app.use(
   cors({
@@ -70,10 +64,6 @@ app.use((req, res) =>
 );
 
 const PORT = process.env.PORT || 5000;
-<<<<<<< HEAD
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-=======
 app.listen(PORT, () =>
   console.log(`🚀 Server running on port ${PORT}`)
 );
->>>>>>> bb44cbb (fix: remove .env from tracking, add gitignore)
